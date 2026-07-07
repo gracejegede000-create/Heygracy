@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About | Grace E. Jegede — Property Management Operations Partner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .story-section { background: var(--white); }
+  .story-grid { max-width: 760px; margin: 0 auto; }
+  .story-text p { color: var(--muted); font-size: 1rem; margin-bottom: 18px; }
+  .story-text h3 { font-family:'Fraunces', serif; font-weight:500; color: var(--navy); font-size: 1.3rem; margin: 30px 0 14px; }
+
+  .timeline-section { background: var(--bg); }
+  .timeline { max-width: 760px; margin: 0 auto; position: relative; padding-left: 30px; }
+  .timeline::before { content: ''; position: absolute; left: 5px; top: 6px; bottom: 6px; width: 1px; background: var(--border); }
+  .timeline-item { position: relative; padding-bottom: 38px; }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-dot { position: absolute; left: -30px; top: 4px; width: 11px; height: 11px; border-radius: 50%; background: var(--emerald); box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px var(--border); }
+  .timeline-date { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--emerald); font-weight: 500; margin-bottom: 6px; }
+  .timeline-item h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.08rem; color: var(--navy); margin-bottom: 3px; }
+  .timeline-item .co { font-size: 0.85rem; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+  .timeline-item p { font-size: 0.92rem; color: var(--muted); max-width: 560px; }
+
+  .values-section { background: var(--white); }
+  .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
+  .value-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; }
+  .value-card .num { font-family: 'IBM Plex Mono', monospace; color: var(--emerald); font-size: 0.8rem; margin-bottom: 12px; }
+  .value-card h3 { font-family: 'Fraunces', serif; font-weight: 500; color: var(--navy); font-size: 1.08rem; margin-bottom: 10px; }
+  .value-card p { color: var(--muted); font-size: 0.9rem; }
+
+  .approach-section { background: var(--navy); position: relative; overflow: hidden; }
+  .approach-section::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 700px 400px at 85% 20%, rgba(199,154,61,0.16) 0%, transparent 60%); }
+  .approach-section .wrap { position: relative; z-index: 1; }
+  .approach-section .section-eyebrow { color: var(--emerald-lt); }
+  .approach-section .section-eyebrow::before { background: var(--emerald-lt); }
+  .approach-section .section-title { color: var(--white); }
+  .approach-section p.lead { color: rgba(255,255,255,0.72); font-size: 1.05rem; max-width: 680px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">Grace E. Jegede<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="index.html#watch-workflow">See How I Work</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="btn btn-emerald" style="padding:10px 20px; font-size:0.82rem;">Book a Discovery Call</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="services.html" onclick="closeMenu()">Services</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="contact.html" onclick="closeMenu()">Contact</a>
+  <a href="index.html#watch-workflow" onclick="closeMenu()">See How I Work</a>
+</div>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="wrap">
+    <p class="section-eyebrow reveal">About</p>
+    <h1 class="reveal">The person behind your operations.</h1>
+    <p class="reveal">A bit about my story, why I do this work, and how I approach every client relationship.</p>
+  </div>
+</header>
+
+<!-- MY STORY -->
+<section class="story-section">
+  <div class="wrap">
+    <div class="story-text" style="max-width:760px; margin:0 auto;">
+      <p class="section-eyebrow reveal">My Story</p>
+      <h2 class="section-title reveal" style="margin-bottom:20px;">From admin support to operations partner</h2>
+      <p class="reveal">I started out doing customer support and executive administrative work, managing inboxes, calendars, and the day-to-day details that keep a business moving. It didn't take long to notice a pattern: the businesses that ran smoothly weren't the ones with the most people, they were the ones with the best systems.</p>
+      <p class="reveal">That pattern led me into short-term and long-term rental operations, where the stakes for good systems are even higher. A missed guest message costs a review. A missed maintenance request costs a tenant's trust. A messy calendar costs revenue. I found the work genuinely satisfying: taking a chaotic inbox or an inconsistent process and turning it into something reliable.</p>
+
+      <h3>Why I Specialize in Property Management Operations</h3>
+      <p class="reveal">Property management sits at the intersection of hospitality, logistics, and customer service, all happening at once, every day. It rewards people who can hold a lot of moving pieces without dropping any of them. I specialize here because I like that challenge, and because I've seen firsthand how much a portfolio changes once someone owns the operational details full-time.</p>
+      <p class="reveal">I'm not interested in just clearing a task list. I want to understand how your business actually runs, then build the systems and communication habits that make it run better, whether that's for a single STR listing or a growing multi-door LTR portfolio.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-section">
+  <div class="wrap">
+    <p class="section-eyebrow reveal center">Experience</p>
+    <h2 class="section-title reveal center">Where this experience comes from</h2>
+    <p class="section-sub reveal center">Real roles, real portfolios, real operational problems solved along the way.</p>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <span class="timeline-dot"></span>
+        <div class="timeline-date">Jul 2025 – Apr 2026</div>
+        <h3>Operations &amp; Administrative Virtual Assistant</h3>
+        <div class="co">Roadrunner PM</div>
+        <p>Owned guest communication, turnover and maintenance scheduling, vendor coordination, and SOP documentation across a portfolio of STR listings.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <span class="timeline-dot"></span>
+        <div class="timeline-date">Nov 2024 – Mar 2026</div>
+        <h3>Virtual Assistant, Lead Generation &amp; CRM</h3>
+        <div class="co">Nestoria Estates</div>
+        <p>Managed CRM pipelines and owner-facing coordination while researching and qualifying property owner leads to support portfolio growth.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <span class="timeline-dot"></span>
+        <div class="timeline-date">Jan 2024 – Dec 2024</div>
+        <h3>STR Guest Relations Virtual Assistant</h3>
+        <div class="co">Bruno Short Stays</div>
+        <p>Handled guest communication and booking calendars across multiple active listings, maintaining a consistently high guest rating.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <span class="timeline-dot"></span>
+        <div class="timeline-date">Jan 2023 – Dec 2024</div>
+        <h3>Executive Virtual Assistant</h3>
+        <div class="co">TeeMax Enterprise</div>
+        <p>Managed executive inbox and calendar, and built structured filing systems that laid the groundwork for the process-first approach I use today.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <span class="timeline-dot"></span>
+        <div class="timeline-date">Dec 2022 – Dec 2023</div>
+        <h3>Customer Support</h3>
+        <div class="co">ETIFrank Concept</div>
+        <p>Where it started: managing customer interactions, order processing, and reporting, the foundation for everything that followed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE VALUES -->
+<section class="values-section">
+  <div class="wrap">
+    <p class="section-eyebrow reveal">Core Values</p>
+    <h2 class="section-title reveal">What I bring into every client relationship</h2>
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <div class="num">01</div>
+        <h3>Reliability</h3>
+        <p>If I say it's handled, it's handled. Clients should never have to double-check my work or chase a follow-up.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="num">02</div>
+        <h3>Clear Communication</h3>
+        <p>Guests, tenants, owners, and vendors all get clear, timely communication, and so do you.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="num">03</div>
+        <h3>Ownership</h3>
+        <p>I treat your operations like they're mine to protect, not just a set of tasks to check off.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="num">04</div>
+        <h3>Continuous Improvement</h3>
+        <p>I'm always looking for the next inefficiency to fix, not just maintaining what already exists.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="approach-section">
+  <div class="wrap">
+    <p class="section-eyebrow reveal">My Approach</p>
+    <h2 class="section-title reveal">How I work with clients</h2>
+    <p class="lead reveal">I start every relationship with a real discovery process, understanding your systems, your software, and where things currently break down, before I touch a single task. From there, I work proactively: flagging issues before they become problems, documenting processes as I go, and treating your business with the same care I'd want for my own.</p>
+    <p class="lead reveal">The goal isn't just to keep up with your operations. It's to make them noticeably better within the first few weeks, and keep improving them from there.</p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="content">
+    <h2 class="reveal">Think we'd work well together?</h2>
+    <p class="reveal">Let's get on a call and talk through your operations.</p>
+    <a href="contact.html" class="btn btn-emerald reveal">Book a Discovery Call</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Grace E. Jegede<span>.</span></div>
+        <p class="footer-tag">Property management operations support for STR and LTR portfolios, remote-first.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="mailto:gracejegede000@gmail.com">Email</a>
+          <a href="https://wa.me/2348163971658" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://linkedin.com/in/gracejegede" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.upwork.com/freelancers/~017b2a7ccb002dc033" target="_blank" rel="noopener">Upwork</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Grace E. Jegede. Property Management Operations Partner.</span>
+      <span>Remote-first · STR &amp; LTR</span>
+    </div>
+  </div>
+</footer>
+
+<a class="float-cta" href="contact.html" aria-label="Book a discovery call">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  <span>Book a Call</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

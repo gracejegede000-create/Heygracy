@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact | Grace E. Jegede — Property Management Operations Partner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .contact-section { background: var(--white); }
+  .contact-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 60px; align-items: start; }
+  @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+  .contact-links { display: flex; flex-direction: column; gap: 14px; margin-top: 10px; }
+  .contact-link-row {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 16px 18px; text-decoration: none; color: var(--ink);
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .contact-link-row:hover { border-color: var(--emerald); transform: translateX(3px); }
+  .contact-link-row .icon {
+    width: 38px; height: 38px; border-radius: 10px; background: var(--navy);
+    display: flex; align-items: center; justify-content: center; color: var(--white); flex-shrink: 0; font-size: 1rem;
+  }
+  .contact-link-row .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; }
+  .contact-link-row .value { font-family: 'Fraunces', serif; font-size: 0.98rem; color: var(--navy); font-weight: 500; }
+  .closing-note { margin-top: 30px; font-size: 0.95rem; color: var(--muted); background: var(--bg); border-left: 3px solid var(--emerald); border-radius: 8px; padding: 18px 20px; }
+
+  .contact-form { display: grid; gap: 18px; }
+  .contact-form .field { display: flex; flex-direction: column; gap: 7px; }
+  .contact-form label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--emerald); }
+  .contact-form input, .contact-form select, .contact-form textarea {
+    font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--ink);
+    background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 13px 16px; transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
+    outline: none; border-color: var(--emerald); box-shadow: 0 0 0 3px rgba(199,154,61,0.14);
+  }
+  .contact-form textarea { resize: vertical; min-height: 140px; }
+  .contact-form .hp { display: none; }
+  .contact-form button {
+    justify-self: start; background: var(--emerald); color: var(--white); border: none; cursor: pointer;
+    padding: 15px 34px; border-radius: 10px; font-weight: 600; font-size: 0.95rem;
+    transition: background 0.2s, transform 0.15s; box-shadow: var(--shadow-sm);
+  }
+  .contact-form button:hover { background: var(--emerald-lt); transform: translateY(-2px); }
+  .contact-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 34px; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">Grace E. Jegede<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#watch-workflow">See How I Work</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+    <li><a href="contact.html" class="btn btn-emerald" style="padding:10px 20px; font-size:0.82rem;">Book a Discovery Call</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="services.html" onclick="closeMenu()">Services</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="contact.html" onclick="closeMenu()">Contact</a>
+  <a href="index.html#watch-workflow" onclick="closeMenu()">See How I Work</a>
+</div>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="wrap">
+    <p class="section-eyebrow reveal">Contact</p>
+    <h1 class="reveal">Let's talk about your operations.</h1>
+    <p class="reveal">Tell me a bit about your portfolio and what's currently taking up too much of your time, I'll follow up to schedule a discovery call.</p>
+  </div>
+</header>
+
+<!-- CONTACT -->
+<section class="contact-section">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="contact-links">
+          <a class="contact-link-row reveal" href="mailto:gracejegede000@gmail.com">
+            <span class="icon">✉</span>
+            <div><div class="label">Email</div><div class="value">gracejegede000@gmail.com</div></div>
+          </a>
+          <a class="contact-link-row reveal" href="https://wa.me/2348163971658" target="_blank" rel="noopener">
+            <span class="icon">💬</span>
+            <div><div class="label">WhatsApp</div><div class="value">+234 816 397 1658</div></div>
+          </a>
+          <a class="contact-link-row reveal" href="https://linkedin.com/in/gracejegede" target="_blank" rel="noopener">
+            <span class="icon">in</span>
+            <div><div class="label">LinkedIn</div><div class="value">/in/gracejegede</div></div>
+          </a>
+          <a class="contact-link-row reveal" href="https://www.upwork.com/freelancers/~017b2a7ccb002dc033" target="_blank" rel="noopener">
+            <span class="icon">◎</span>
+            <div><div class="label">Upwork</div><div class="value">Hire me on Upwork</div></div>
+          </a>
+        </div>
+        <p class="closing-note reveal">Looking forward to hearing about your portfolio, whatever stage it's at. If I'm not the right fit, I'll tell you that too.</p>
+      </div>
+
+      <div class="contact-card reveal">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hp"><label>Do not fill this out if you're human: <input name="bot-field" /></label></p>
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input id="cf-name" type="text" name="name" required placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" type="email" name="email" required placeholder="you@example.com" />
+          </div>
+          <div class="field">
+            <label for="cf-type">Portfolio Type</label>
+            <select id="cf-type" name="portfolio_type">
+              <option value="STR">Short-Term Rental (STR)</option>
+              <option value="LTR">Long-Term Rental (LTR)</option>
+              <option value="Both">Both STR &amp; LTR</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cf-size">Portfolio Size</label>
+            <input id="cf-size" type="text" name="portfolio_size" placeholder="e.g. 6 units" />
+          </div>
+          <div class="field">
+            <label for="cf-message">What's taking up too much of your time?</label>
+            <textarea id="cf-message" name="message" required placeholder="Tell me about your operations, tools, and where things are breaking down..."></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Grace E. Jegede<span>.</span></div>
+        <p class="footer-tag">Property management operations support for STR and LTR portfolios, remote-first.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="mailto:gracejegede000@gmail.com">Email</a>
+          <a href="https://wa.me/2348163971658" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://linkedin.com/in/gracejegede" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.upwork.com/freelancers/~017b2a7ccb002dc033" target="_blank" rel="noopener">Upwork</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Grace E. Jegede. Property Management Operations Partner.</span>
+      <span>Remote-first · STR &amp; LTR</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
