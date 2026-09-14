@@ -1,19 +1,73 @@
-function toggleMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
-  document.querySelector('.hamburger').classList.toggle('open');
-}
-function closeMenu() {
-  document.getElementById('mobileMenu').classList.remove('open');
-  document.querySelector('.hamburger').classList.remove('open');
+// Initialize Lucide Icons
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
+});
+
+// Resume Modal Handlers
+function openResumeModal() {
+  const modal = document.getElementById('resume-modal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 }
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      observer.unobserve(e.target);
+function closeResumeModal(event) {
+  if (
+    event.target.id === 'resume-modal' ||
+    event.target.classList.contains('modal-close')
+  ) {
+    const modal = document.getElementById('resume-modal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
     }
-  });
-}, { threshold: 0.12 });
+  }
+}
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+// Lightbox Modal Handlers for Proof Images
+function openLightbox(imageSrc, captionText) {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+
+  if (lightbox && lightboxImg && lightboxCaption) {
+    lightboxImg.src = imageSrc;
+    lightboxCaption.textContent = captionText;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeLightbox(event) {
+  if (
+    event.target.id === 'lightbox' || 
+    event.target.classList.contains('lightbox-close')
+  ) {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  }
+}
+
+// Global ESC key listener to close active modals
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const resumeModal = document.getElementById('resume-modal');
+    const lightbox = document.getElementById('lightbox');
+
+    if (resumeModal && resumeModal.classList.contains('active')) {
+      resumeModal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    if (lightbox && lightbox.classList.contains('active')) {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  }
+});
